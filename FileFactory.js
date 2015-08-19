@@ -156,6 +156,7 @@
      * @param  {String} fileName      [name of the file]
      * @param  {Boolean} logs         [enable the logs]
      * @param  {String} idProgressBar [id of the progress bar]
+     * @param  {Object} headers [headers]
      * @return {Object}               [Promise - Success/Error]
      *                                         return true:boolean || error:object
      */

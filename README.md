@@ -10,7 +10,7 @@ Below there's the dependecies list:
 - [cordova-plugin-device](http://docs.phonegap.com/en/edge/cordova_device_device.md.html)
 - [cordova-plugin-file](https://github.com/apache/cordova-plugin-file)
 - [Q library](https://github.com/kriskowal/q)
-- [cordova-plugin-dialogs](https://github.com/apache/cordova-plugin-dialogs) ] *(only for askUser)*
+- [cordova-plugin-dialogs](https://github.com/apache/cordova-plugin-dialogs) *(only for askUser)*
 - [cordova-plugin-file-transfer](https://github.com/apache/cordova-plugin-file-transfer) *(only for downloadFile)*
 - [cordova-plugin-zip](https://github.com/MobileChromeApps/cordova-plugin-zip) *(only for unZipFile)*
 - [cordova-plugin-file-opener2](https://github.com/pwlin/cordova-plugin-file-opener2) *(only for openFile)*
@@ -56,7 +56,7 @@ Here is the list of public API's exposed by FileFactory as well as a brief descr
 ### .getFreeDiskSpace()  
 Gets the free space in disk (in KiloByte).
 
-@return {Object} [Promise - Success/Error]  
+*@return* {Object} [Promise - Success/Error]  
 ```
 return freeSpace:int
 ```
@@ -67,9 +67,9 @@ Check if exist a file or a directory.
 If there are not errors, it returns an object with 3 parameters,  
 found (true/false), isFile (true/false) and isDirectory (true/false)
 
-@param  {String} filePath [path of the file/dir]  
-@param  {String} fileName [name of the file/dir]  
-@return {Object}          [Promise - Success/Error]  
+*@param*  {String} **filePath** [path of the file/dir]  
+*@param*  {String} **fileName** [name of the file/dir]  
+*@return* {Object}          [Promise - Success/Error]  
 ```
 return {  
     found: true/false:boolean,  
@@ -79,18 +79,19 @@ return {
 ```
 
 <a name="downloadFile"></a>
-### .downloadFile(url, filePath, fileName, logs, idProgressBar)  
+### .downloadFile(url, filePath, fileName, logs, idProgressBar, headers)  
 Downloads a file.  
 Before start the download checks if already exist a file with the same name in the given directory.  
 If given, during the download it updates the progress bar via the html id.  
 If the first download fails, it automatically makes a second attempt.
 
-@param  {String} url           [Download url]  
-@param  {String} filePath      [path of the file]  
-@param  {String} fileName      [name of the file]  
-@param  {Boolean} logs         [enable the logs]  
-@param  {String} idProgressBar [id of the progress bar]  
-@return {Object}               [Promise - Success/Error]  
+*@param*  {String} **url**           [Download url]  
+*@param*  {String} **filePath**      [path of the file]  
+*@param*  {String} **fileName**      [name of the file]  
+*@param*  {Boolean} **logs**         [enable the logs]  
+*@param*  {String} **idProgressBar** [id of the progress bar]  
+*@param*  {Object} **headers** [headers]  
+*@return* {Object}               [Promise - Success/Error]  
 ```
 return true:boolean || error:object
 ```
@@ -100,12 +101,12 @@ return true:boolean || error:object
 Unzip a given file.  
 Before start the unzip checks if the file exist and if there is a file with the same name in the given directory.
 
-@param  {String} filePath  [path of the zipped file]  
-@param  {String} fileName  [name of the zipped file]  
-@param  {String} unzipPath [path of the unzipped file]  
-@param  {String} unzipFile [name of the unzipped file]  
-@param  {Boolean} logs     [enable the logs]  
-@return {Object}           [Promise - Success/Error]  
+*@param*  {String} **filePath**  [path of the zipped file]  
+*@param*  {String} **fileName**  [name of the zipped file]  
+*@param*  {String} **unzipPath** [path of the unzipped file]  
+*@param*  {String} **unzipFile** [name of the unzipped file]  
+*@param*  {Boolean} **logs**    [enable the logs]  
+*@return* {Object}           [Promise - Success/Error]  
 ```
 return true:boolean || error:object
 ```
@@ -114,10 +115,10 @@ return true:boolean || error:object
 ### .openFile(filePath, fileName, fileType, logs)  
 Opens a file (if exist).
 
-@param  {String} filePath   [Path of the file to open]  
-@param  {String} fileName   [Name of the file to open]  
-@param  {String} fileType   [Type of the file to open]  
-@return {Object}            [Promise Success/Error]  
+*@param*  {String} **filePath**   [Path of the file to open]  
+*@param*  {String} **fileName**   [Name of the file to open]  
+*@param*  {String} **fileType**   [Type of the file to open]  
+*@return* {Object}            [Promise Success/Error]  
 ```
 return true:boolean || error:object
 ```
@@ -126,9 +127,9 @@ return true:boolean || error:object
 ### .deleteFile(filePath, fileName, logs)  
 Deletes a file or a directory (if exist).
 
-@param  {String} filePath   [Path of the file/dir to delete]  
-@param  {String} fileName   [Path of the file/dir to delete]  
-@return {Object}            [Promise Success/Error]  
+*@param*  {String} **filePath**   [Path of the file/dir to delete]  
+*@param*  {String} **fileName**   [Path of the file/dir to delete]  
+*@return* {Object}            [Promise Success/Error]  
 ```
 return {
     success: true:boolean,
@@ -140,11 +141,11 @@ return {
 ### .askUser(title, message, btn1, btn2)  
 Ask to the user something via confirm.
 
-@param  {String} title   [Title of the confim]  
-@param  {String} message [Message of the confirm]  
-@param  {String} btn1    [Button 1 text (Yes)]  
-@param  {String} btn2    [Button 2 text (No)]  
-@return {Object}         [Promise Success/Error]  
+*@param*  {String} **title**   [Title of the confim]  
+*@param*  {String} **message** [Message of the confirm]  
+*@param*  {String} **btn1**    [Button 1 text (Yes)]  
+*@param*  {String} **btn2**    [Button 2 text (No)]  
+*@return* {Object}         [Promise Success/Error]  
 ```
 return true:boolean || false:boolean
 ```
