@@ -1,0 +1,35 @@
+{
+  "name": "filefactory",
+  "version": "1.0.1",
+  "description": "FileFactory is a easy to use utility for managing files built for Cordova, compatible with Angular and Ionic.",
+  "main": "FileFactory.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "File",
+    "Cordova",
+    "Mobile"
+  ],
+  "author": "Tomas Della Vedova/@delvedor - infoFACTORY/@info_factory",
+  "license": "GPLv2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delvedor/FileFactory"
+  },
+  "bugs": {
+    "url": "https://github.com/delvedor/FileFactory/issues"
+  },
+  "homepage": "https://github.com/delvedor/FileFactory",
+  "dependencies": {
+    "cordova-plugin-device": "*",
+    "cordova-plugin-file": "*",
+    "q": "*"
+  },
+  "optionalDependencies": {
+    "cordova-plugin-dialogs": "*",
+    "cordova-plugin-file-transfer": "*",
+    "cordova-plugin-zip": "*",
+    "cordova-plugin-file-opener2": "*"
+  }
+}
