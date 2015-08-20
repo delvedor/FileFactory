@@ -1,6 +1,6 @@
 # FileFactory
 
-*I wrote this code during my job at [infoFACTORY](http://www.infofactory.it/en/).*  
+*Code written by [infoFACTORY](http://www.infofactory.it/en/).*  
 FileFactory is a easy to use utility for managing files built for Cordova, compatible with Angular and Ionic.
 
 It is useful in case you need to download a lot of content for your mobile applications.  
@@ -173,8 +173,7 @@ return taskProgress:int
 ## Contributing  
 If you feel you can help in any way, be it with examples, extra testing, or new features please open a pull request or open an issue.
 
-*I would make a special thanks to [infoFACTORY](http://www.infofactory.it/en/) for allowing me to publish this code.  
-'Open Source code is very important and is a way to say thanks or help others developers.' they said!*
+*I would make a special thanks to [infoFACTORY](http://www.infofactory.it/en/) for allowing me to publish this code.*
 ______________________________________________________________________________________________________________________
 ## License
 The code is released under the GNU GPLv2 license.
